@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DashBoard</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="main.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="wraper">
+			<div class="header">
+				<div class="logo">
+					<a class="logo-link" href="index.html">
+						<img class="logo-link__img" src="img/logo.png" alt="logotype">
+					</a>
+				</div>
+				<div class="menu">
+					<ul class="menu-list">
+						<li class="menu-list-item">
+							<a href="#" class="menu-list-item-link">
+								<span class="menu-list-item-link__message menu-list-item-link__message-incomming"></span>
+							</a>
+						</li>
+						<li class="menu-list-item">
+							<a href="#" class="menu-list-item-link">
+								<span class="menu-list-item-link__notification  menu-list-item-link__notification-incomming"></span>
+							</a>
+						</li>
+						<li class="menu-list-item">
+							<a href="#" class="menu-list-item-link">
+								<span class="menu-list-item-link__tools"></span>
+							</a>
+						</li>
+						<li class="menu-list-item">
+							<a href="#" class="menu-list-item-link">
+								<span class="menu-list-item-link__user">Joey Bing</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<div class="sidebar">
+					<div class="sidebar-top">
+						<div class="profile">
+							<a href="#" class="profile-link">
+								<img src="img/profile_photo.jpg" alt="photo" class="profile-link__img">
+							</a>
+							<div class="profile-info">
+								<div class="profile-info__name">Welcome Joey</div>
+								<div class="profile-info__status profile-info__status_online">Online</div>
+							</div>
+						</div>
+						<div class="search">
+							<input type="text" placeholder="Search" class="search__field">
+							<span class="search__icon"></span>
+						</div>
+						<div class="main-menu">
+							<ul class="main-menu-list">
+								<li class="main-menu-list-item main-menu-list-item_active">
+									<a href="#" class="main-menu-list-item-link">
+										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_dashboard"></span>
+										Dashboard
+										<span  class="main-menu-list-item-link__dropdown-ico"></span>
+									</a>
+								</li>
+								<li class="main-menu-list-item">
+									<a href="#" class="main-menu-list-item-link">
+										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_ui"></span>
+										UI elements
+										<span  class="main-menu-list-item-link__dropdown-ico"></span>
+									</a>
+								</li>
+								<li class="main-menu-list-item">
+									<a href="#" class="main-menu-list-item-link">
+										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_tables"></span>
+										Tables
+										<span  class="main-menu-list-item-link__dropdown-ico"></span>
+									</a>
+								</li>
+								<li class="main-menu-list-item">
+									<a href="#" class="main-menu-list-item-link">
+										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_charts"></span>
+										Charts & Statistics
+										<span  class="main-menu-list-item-link__dropdown-ico"></span>
+									</a>
+								</li>
+								<li class="main-menu-list-item">
+									<a href="#" class="main-menu-list-item-link">
+										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_mail"></span>
+										Mail
+										<span  class="main-menu-list-item-link__dropdown-ico"></span>
+										<span class="main-menu-list-item-link__title">24 New</span>
+									</a>
+								</li>
+								<li class="main-menu-list-item">
+									<a href="#" class="main-menu-list-item-link">
+										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_pages"></span>
+										Pages
+										<span  class="main-menu-list-item-link__dropdown-ico"></span>
+									</a>
+								</li>
+								<li class="main-menu-list-item">
+									<a href="#" class="main-menu-list-item-link">
+										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_level"></span>
+										Four level dropdown
+										<span  class="main-menu-list-item-link__dropdown-ico"></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="separator"></div>
+					<div class="sidebar-bottom">
+						<div class="system-statistics">
+							<span class="system-statistics__title">System Statistics</span>
+							<div class="system-statistics-circular" data-percent="32">
+								<div class="system-statistics-circular-progress">
+									<div class="system-statistics-circular-progress__fill"></div>
+								</div>
+								<div class="system-statistics-circular-percents">
+									<div class="system-statistics-circular-percents-wrapper">
+										<span class="system-statistics-circular-percents__value">%</span>
+									</div>
+								</div>
+							</div>
+							<span class="system-statistics__legend">Server Load</span>
+							<div class="system-statistics__line">
+							</div>
+							<div class="system-statistics-loadbar">
+								<div class="system-statistics-loadbar-storage">
+									<span class="system-statistics-loadbar-storage__title">Storage - 68%</span>
+									<div class="system-statistics-loadbar-storage-progress">
+										<div  class="system-statistics-loadbar-storage-progress__bar" style="width: 68%"></div>
+									</div>
+								</div>
+								<div class="system-statistics-loadbar-bandwidth">
+									<span class="system-statistics-loadbar-bandwidth__title">Bandwidth - 42%</span>
+									<div class="system-statistics-loadbar-bandwidth-progress">
+										<div  class="system-statistics-loadbar-bandwidth-progress__bar" style="width: 42%"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- main -->
+				<div class="main">
+					<div class="main-dashboard">
+						<div class="top-content">
+							<div class="top-content-left">
+								<span class="top-content-left__icon"></span>
+								<span class="top-content-left__caption">Dashboard</span>
+							</div>
+							<div class="top-content-right">
+								<ul class="top-content-right-menu">
+									<li class="top-content-right-menu-item">
+										<a href="#" class="top-content-right-menu-item__link">
+											Last week
+										</a>
+									</li>
+									<li class="top-content-right-menu-item">
+										<a href="#" class="top-content-right-menu-item__link">
+											Tooday
+										</a>
+									</li>
+									<li class="top-content-right-menu-item">
+										<a href="#" class="top-content-right-menu-item__link top-content-right-menu-item__link_dropdown">
+											<span class="top-content-right-menu-item__icon"></span>
+											Custom
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="middle-content">
+							<ul class="middle-content-info">
+								<li class="middle-content-info-item">
+									<span class="middle-content-info-item__caption">New Bookings</span>
+									<span class="middle-content-info-item__value">14,374</span>
+									<div class="load-line">
+										<div class="load-line-progress">
+											<div  class="load-line-progress__bar" style="width: 32%"></div>
+										</div>
+									</div>
+									<a href="#" class="middle-content-info-item__details">View Details</a>
+								</li>
+								<li class="middle-content-info-item middle-content-info-item_profit">
+									<span class="middle-content-info-item__caption">Profit</span>
+									<span class="middle-content-info-item__value">6,21,723</span>
+									<div class="load-line">
+										<div class="load-line-progress">
+											<div  class="load-line-progress__bar" style="width: 60%"></div>
+										</div>
+									</div>
+									<a href="#" class="middle-content-info-item__details">View Details</a>
+								</li>
+								<li class="middle-content-info-item middle-content-info-item_visitors">
+									<span class="middle-content-info-item__caption ">Visitors</span>
+									<span class="middle-content-info-item__value">814,324</span>
+									<div class="load-line">
+										<div class="load-line-progress">
+											<div  class="load-line-progress__bar" style="width: 25%"></div>
+										</div>
+									</div>
+									<a href="#" class="middle-content-info-item__details">View Details</a>
+								</li>
+								<li class="middle-content-info-item middle-content-info-item_views">
+									<span class="middle-content-info-item__caption">Page Views</span>
+									<span class="middle-content-info-item__value">1,37,432</span>
+									<div class="load-line">
+										<div class="load-line-progress">
+											<div  class="load-line-progress__bar" style="width: 45%"></div>
+										</div>
+									</div>
+									<a href="#" class="middle-content-info-item__details">View Details</a>
+								</li>
+							</ul>
+						</div>
+						<!-- tables -->
+						<div class="middle-content-tables">
+							<div class="middle-content-tables-upload">
+								File upload
+							</div>
+							<div class="middle-content-tables-browsers">
+								 Browsers
+							</div>
+							<div class="middle-content-tables-support">
+								 Tech Support
+							</div>
+						</div>
+						<!-- end tables -->
+					</div>
+					<div class="separator"></div>
+
+					<div class="main-bookmarks">
+						<div class="bookings">
+							<span class="bookings__title">Bookings and Visitors</span>
+							<div class="bookings__chart"></div>
+						</div>
+						<div class="traffic">
+							<span class="traffic__title">Traffic</span>
+							<div class="traffic__chart"></div>
+						</div>
+					</div>
+
+					<div class="separator"></div>
+					<div class="main-todolist">
+						To do list & Calendar
+					</div>
+				</div>
+				<!-- end main -->
+			</div>
+			<div class="footer">Copy right 2014 All Rights Reserved.</div>
+		</div>
+	</div>
+</body>
+</html>
