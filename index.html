@@ -3,18 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>DashBoard</title>
-	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-	<link rel="stylesheet" href="main.min.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script src="main.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="styles/main.min.css">
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/Chart.js"></script>
+	<script src="js/main.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="wraper">
 			<div class="header">
-				<div class="logo">
+				<div class="logo"
 					<a class="logo-link" href="index.html">
-						<img class="logo-link__img" src="img/logo.png" alt="logotype">
+						<img class="logo-link__img" src="images/logo.png" alt="logotype">
 					</a>
 				</div>
 				<div class="menu">
@@ -47,7 +48,7 @@
 					<div class="sidebar-top">
 						<div class="profile">
 							<a href="#" class="profile-link">
-								<img src="img/profile_photo.jpg" alt="photo" class="profile-link__img">
+								<img src="images/profile_photo.jpg" alt="photo" class="profile-link__img">
 							</a>
 							<div class="profile-info">
 								<div class="profile-info__name">Welcome Joey</div>
@@ -239,17 +240,25 @@
 					<div class="main-bookmarks">
 						<div class="bookings">
 							<span class="bookings__title">Bookings and Visitors</span>
-							<div class="bookings__chart"></div>
+							<div class="bookings-chart">
+								<div style="width: 90%">
+									<div>
+										<canvas id="canvas" height="450" width="600"></canvas>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="traffic">
 							<span class="traffic__title">Traffic</span>
-							<div class="traffic__chart"></div>
+							<div class="traffic-chart">
+									<canvas class="traffic-chart__donught" id="chart-area"></canvas>
+							</div>
 						</div>
 					</div>
 
 					<div class="separator"></div>
 					<div class="main-todolist">
-						To do list & Calendar
+						To do list & Calendar<br>
 					</div>
 				</div>
 				<!-- end main -->
