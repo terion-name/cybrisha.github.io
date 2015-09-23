@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,200,400italic);
 body {
   background-color: #ececec;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #787878;
 }
 
@@ -590,8 +590,8 @@ The `sprites` mixin generates identical output to the CSS template
   position: absolute;
   top: -10px;
   margin-left: 12px;
-  padding: 3px 6px;
-  font-size: .6em;
+  padding: 2px 6px;
+  font-size: .75em;
   border-radius: 50%;
   background-color: #e06d6a;
   color: #fff;
@@ -609,8 +609,8 @@ The `sprites` mixin generates identical output to the CSS template
   position: absolute;
   top: -10px;
   margin-left: 10px;
-  padding: 3px 6px;
-  font-size: .6em;
+  padding: 2px 6px;
+  font-size: .75em;
   border-radius: 50%;
   background-color: #e06d6a;
   color: #fff;
@@ -636,7 +636,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .menu-list-item-link__user::after {
   background-image: url("sources/sprite.png");
-  background-position: -96px -128px;
+  background-position: -116px -128px;
   width: 9px;
   height: 5px;
   content: "";
@@ -733,7 +733,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .main-bookmarks {
   height: 415px;
-  padding: 26px;
+  padding: 18px 25px 18px 18px;
 }
 
 .main-todolist {
@@ -778,26 +778,37 @@ The `sprites` mixin generates identical output to the CSS template
 @include sprites($spritesheet-sprites);
 */
 
-.top-content {
+.top-content,
+.table-upload__popup,
+.table-upload__close,
+.table-support-img.sucsess::after,
+.table-support-img.error::after {
   *zoom: 1;
 }
 
 .top-content:before,
-.top-content:after {
+.table-upload__popup:before,
+.table-upload__close:before,
+.top-content:after,
+.table-upload__popup:after,
+.table-upload__close:after {
   content: " ";
   display: table;
 }
 
-.top-content:after {
+.top-content:after,
+.table-upload__popup:after,
+.table-upload__close:after {
   clear: both;
 }
 
 .top-content {
-  padding: 18px 18px 13px 30px;
+  padding: 18px 18px 12px 30px;
 }
 
 .top-content-left {
   float: left;
+  padding-top: 10px;
 }
 
 .top-content-left__icon {
@@ -806,7 +817,7 @@ The `sprites` mixin generates identical output to the CSS template
   width: 24px;
   height: 22px;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .top-content-left__caption {
@@ -856,7 +867,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .top-content-right-menu-item__link_dropdown::after {
   background-image: url("sources/sprite.png");
-  background-position: -96px -128px;
+  background-position: -116px -128px;
   width: 9px;
   height: 5px;
   content: "";
@@ -883,8 +894,8 @@ The `sprites` mixin generates identical output to the CSS template
 .middle-content-info-item {
   display: inline-block;
   height: 90px;
-  margin-left: 32px;
   width: 200px;
+  margin-left: 32px;
   background: #6dadbd;
   border-radius: 4px;
 }
@@ -936,17 +947,271 @@ The `sprites` mixin generates identical output to the CSS template
 .middle-content-tables-browsers,
 .middle-content-tables-support {
   display: inline-block;
-  height: 160px;
-  width: 260px;
-  padding: 10px;
+  height: 170px;
+  width: 31.5%;
+  margin-left: 2%;
   background-color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
-  margin-left: 27px;
 }
 
 .middle-content-tables-upload {
-  margin-left: 0;
+  margin: 0;
+}
+
+.table-upload {
+  width: 100%;
+}
+
+.table-upload__row {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.table-upload__row_last {
+  border-bottom: none;
+}
+
+.table-upload__cell {
+  padding: 5px;
+}
+
+.table-upload__popup {
+  background-image: url("sources/sprite.png");
+  background-position: -96px -128px;
+  width: 10px;
+  height: 6px;
+  display: inline-block;
+  float: right;
+  margin: 4px;
+}
+
+.table-upload__close {
+  background-image: url("sources/sprite.png");
+  background-position: -50px -153px;
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  float: right;
+  margin: 4px;
+}
+
+.table-upload-right {
+  margin-left: 25px;
+}
+
+.table-upload-right__file-name {
+  font-size: 14px;
+}
+
+.table-upload-right__file-size {
+  font-size: 11px;
+  display: block;
+  margin-top: 5px;
+}
+
+.table-upload__upload {
+  background-image: url("sources/sprite.png");
+  background-position: -189px -106px;
+  width: 10px;
+  height: 11px;
+  display: inline-block;
+  float: left;
+  margin: 4px;
+}
+
+.table-upload__mark {
+  background-image: url("sources/sprite.png");
+  background-position: -189px -86px;
+  width: 12px;
+  height: 10px;
+  display: inline-block;
+  float: left;
+  margin: 4px;
+}
+
+.table-upload-progress {
+  margin: 8px 25px;
+  overflow: hidden;
+  height: 13px;
+  background-color: #eae8e8;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.table-upload-progress-bar {
+  width: 0;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  background-color: #5bb85b;
+  -webkit-animation: complete 1500ms;
+          animation: complete 1500ms;
+}
+
+.table-upload-progress-striped .table-upload-progress-bar {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 30px 30px;
+  font-size: 9px;
+}
+
+.table-browsers {
+  width: 100%;
+  text-align: center;
+  line-height: 20px;
+}
+
+.table-browsers__row :first-child {
+  border-left: none;
+}
+
+.table-browsers__row :last-child {
+  border-right: none;
+}
+
+.table-browsers__cell {
+  border: 1px solid #d9d9d9;
+  padding: 3px 5px 4px;
+}
+
+.table-browsers__cell_top {
+  border-top: none;
+}
+
+.table-browsers__cell_bottom {
+  border-bottom: none;
+}
+
+.table-browsers__cell_chrome {
+  background-image: url("sources/sprite.png");
+  background-position: -162px -31px;
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
+.table-browsers__cell_firefox {
+  background-image: url("sources/sprite.png");
+  background-position: -136px -98px;
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.table-browsers__cell_ie {
+  background-image: url("sources/sprite.png");
+  background-position: -120px -68px;
+  width: 19px;
+  height: 20px;
+  display: block;
+}
+
+.table-browsers__cell_safari {
+  background-image: url("sources/sprite.png");
+  background-position: 0px -98px;
+  width: 19px;
+  height: 20px;
+  display: block;
+}
+
+.table-browsers__browser-icons {
+  margin: auto;
+}
+
+.browser-type {
+  text-align: left;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.table-support {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.table-support_remove,
+.table-support_reply {
+  display: inline-block;
+  float: right;
+  margin: 4px 2px;
+}
+
+.table-support_remove {
+  background-image: url("sources/sprite.png");
+  background-position: 0px -179px;
+  width: 14px;
+  height: 14px;
+}
+
+.table-support_reply {
+  background-image: url("sources/sprite.png");
+  background-position: -189px -127px;
+  width: 12px;
+  height: 8px;
+  margin-top: 8px;
+}
+
+.table-support__text {
+  padding: 8px 2px 8px 4px;
+}
+
+.table-support__row {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.table-support__row_active {
+  background: #f9f9f9;
+}
+
+.table-support__row_last {
+  border: none;
+}
+
+.table-support__cell {
+  vertical-align: middle;
+  height: 40px;
+}
+
+.table-support-img {
+  padding: 5px 0 5px 5px;
+}
+
+.table-support-img.sucsess::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 8px;
+  width: 8px;
+  margin-left: 22px;
+  top: -2px;
+  background: #6dbe6d;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.table-support-img.error::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 8px;
+  width: 8px;
+  margin-left: 22px;
+  top: -2px;
+  background: #ff2002;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.table-support-img__link {
+  float: left;
+  display: block;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background: url("../../../../images/photo.jpg") no-repeat center;
+}
+
+.table-support-img__link_other {
+  background: url("../../../../images/photo_.jpg") no-repeat center;
 }
 
 .load-line {
@@ -970,7 +1235,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .bookings {
   float: left;
-  width: 48%;
+  width: 46%;
 }
 
 .bookings__title {
@@ -979,8 +1244,8 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 .bookings-chart {
-  height: 295px;
-  padding: 25px 20px 0 25px;
+  height: 255px;
+  padding: 65px 10px 0 30px;
   background: #1d89cf;
 }
 
@@ -1004,13 +1269,13 @@ The `sprites` mixin generates identical output to the CSS template
   margin-top: 50px;
 }
 
-@-webkit-keyframes loader {
+@-webkit-keyframes complete {
   from {
     width: 0;
   }
 }
 
-@keyframes loader {
+@keyframes complete {
   from {
     width: 0;
   }
@@ -1072,13 +1337,8 @@ The `sprites` mixin generates identical output to the CSS template
   height: 73px;
   width: 73px;
   border: 5px solid #eaeaea;
-  border-radius: 100%;
+  border-radius: 50%;
   background: url("../../../../images/profile_photo.jpg") no-repeat center;
-}
-
-.profile-link__img {
-  opacity: 0;
-  filter: alpha(opacity=0);
 }
 
 .profile-info {
@@ -1100,10 +1360,10 @@ The `sprites` mixin generates identical output to the CSS template
   position: absolute;
   height: 8px;
   width: 8px;
-  margin-top: 4px;
+  margin-top: 5px;
   margin-left: -10px;
   background-color: #0f724a;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .search {

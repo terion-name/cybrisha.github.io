@@ -62,7 +62,7 @@
 			animationSteps: 60,
 
 			// String - Animation easing effect
-			animationEasing: "easeOut",
+			animationEasing: "easeOutBounce",
 
 			// Boolean - If we should show the scale at all
 			showScale: true,
@@ -2060,7 +2060,7 @@
 		barDatasetSpacing : 1,
 
 		//String - A legend template
-		legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+		legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 
 	};
 
@@ -2339,22 +2339,22 @@
 		segmentStrokeColor : "#fff",
 
 		//Number - The width of each segment stroke
-		segmentStrokeWidth : 2,
+		segmentStrokeWidth : 4,
 
 		//The percentage of the chart that we cut out of the middle.
-		percentageInnerCutout : 50,
+		percentageInnerCutout : 55,
 
 		//Number - Amount of animation steps
-		animationSteps : 100,
+		animationSteps : 140,
 
 		//String - Animation easing effect
-		animationEasing : "easeOut",
+		animationEasing : "easeOutExpo",
 
 		//Boolean - Whether we animate the rotation of the Doughnut
 		animateRotate : true,
 
 		//Boolean - Whether we animate scaling the Doughnut from the centre
-		animateScale : false,
+		animateScale : true,
 
 		//String - A legend template
 		legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
