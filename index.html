@@ -393,36 +393,116 @@
 								<p class="tasks__day">Today</p>
 								<ul class="tasks-list">
 									<li class="tasks-item active">
-										<input type="checkbox" name="Client" id="Client" class="tasks__checkbox">
+										<input type="checkbox" name="item-a" class="tasks__checkbox" id="item-a">
+										<label for="item-a"></label>
 										<span class="tasks__caption">Client meeting at 5 pm</span>
 									</li>
-									<li class="tasks-item checked">
-										<input type="checkbox" name="Weekly" id="Weekly" class="tasks__checkbox">
+									<li class="tasks-item">
+										<input type="checkbox" name="item-b" class="tasks__checkbox" id="item-b" checked>
+										<label for="item-b"></label>
 										<span class="tasks__caption">Weekly schedules to be updated</span>
 									</li>
-									<li class="tasks-item checked">
-										<input type="checkbox" name="Design" id="Design" class="tasks__checkbox">
+									<li class="tasks-item">
+										<input type="checkbox" name="item-c" class="tasks__checkbox" id="item-c" checked>
+										<label for="item-c"></label>
 										<span class="tasks__caption">Design team meeting at 2 pm</span>
 									</li>
 								</ul>								
 								<p class="tasks__day">Wed, Oct, 2014</p>
 								<ul class="tasks-list">
 									<li class="tasks-item">
-										<input type="checkbox" name="Client" id="Client" class="tasks__checkbox">
+										<input type="checkbox" name="item-d" class="tasks__checkbox" id="item-d">
+										<label for="item-d"></label>
 										<span class="tasks__caption">Client meeting at 5 pm</span>
 									</li>
 									<li class="tasks-item active">
-										<input type="checkbox" name="Weekly" id="Weekly" class="tasks__checkbox">
+										<input type="checkbox" name="item-e" class="tasks__checkbox" id="item-e">
+										<label for="item-e"></label>
 										<span class="tasks__caption">Weekly schedules to be updated</span>
 									</li>
 								</ul>
 							</div>
 						</div>
 						<div class="calendar">
-						<!-- It's a nice place for calendar -->
+							<div class="calendar__month">
+								October 2014
+								<div class="calendar-arrow">
+									<a href="#" class="calendar-arrow-link">
+										<span class="calendar-arrow__left"></span>
+									</a>
+									<a href="#" class="calendar-arrow-link">
+										<span class="calendar-arrow__right"></span>
+									</a>
+								</div>
+							</div>
+							<div class="calendar-base">
+								<table class="calendar-table">
+									<tr class="calendar-table-head">
+										<th class="calendar-table-head__cell">SU</th>
+										<th class="calendar-table-head__cell">MO</th>
+										<th class="calendar-table-head__cell">TU</th>
+										<th class="calendar-table-head__cell">WE</th>
+										<th class="calendar-table-head__cell">TH</th>
+										<th class="calendar-table-head__cell">FR</th>
+										<th class="calendar-table-head__cell">SA</th>
+									</tr>
+									<tr class="calendar-table__row">
+										<td class="calendar-table__cell calendar-table__cell_other-moth">28</td>
+										<td class="calendar-table__cell calendar-table__cell_other-moth">29</td>
+										<td class="calendar-table__cell calendar-table__cell_other-moth">30</td>
+										<td class="calendar-table__cell">1</td>
+										<td class="calendar-table__cell">2</td>
+										<td class="calendar-table__cell calendar-table__cell_marked">3</td>
+										<td class="calendar-table__cell">4</td>
+									</tr>
+									<tr class="calendar-table__row">
+										<td class="calendar-table__cell">5</td>
+										<td class="calendar-table__cell calendar-table__cell_marked">6</td>
+										<td class="calendar-table__cell">7</td>
+										<td class="calendar-table__cell">8</td>
+										<td class="calendar-table__cell">9</td>
+										<td class="calendar-table__cell">10</td>
+										<td class="calendar-table__cell">11</td>
+									</tr>
+									<tr class="calendar-table__row">
+										<td class="calendar-table__cell">12</td>
+										<td class="calendar-table__cell">13</td>
+										<td class="calendar-table__cell">14</td>
+										<td class="calendar-table__cell">15</td>
+										<td class="calendar-table__cell">16</td>
+										<td class="calendar-table__cell">17</td>
+										<td class="calendar-table__cell">18</td>
+									</tr>
+									<tr class="calendar-table__row">
+										<td class="calendar-table__cell">19</td>
+										<td class="calendar-table__cell">20</td>
+										<td class="calendar-table__cell">21</td>
+										<td class="calendar-table__cell calendar-table__cell_active">22</td>
+										<td class="calendar-table__cell">23</td>
+										<td class="calendar-table__cell">24</td>
+										<td class="calendar-table__cell">25</td>
+									</tr>
+									<tr class="calendar-table__row">
+										<td class="calendar-table__cell">26</td>
+										<td class="calendar-table__cell">27</td>
+										<td class="calendar-table__cell">28</td>
+										<td class="calendar-table__cell">29</td>
+										<td class="calendar-table__cell">30</td>
+										<td class="calendar-table__cell">31</td>
+										<td class="calendar-table__cell calendar-table__cell_other-moth">1</td>
+									</tr>
+								</table>								
+							</div>
+							<div class="calendar-notification">
+								<span class="calendar-notification__title">
+									*Client meeting*
+								</span>
+								<span class="calendar-notification__time">
+									5.00 PM
+								</span>
+							</div>
 						</div>
 						<div class="separate"></div>
-
 						<div class="forms">
 							<header class="forms__header">
 								Chat &amp; e-mail
