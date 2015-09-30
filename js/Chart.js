@@ -88,7 +88,7 @@
 			scaleShowLabels: true,
 
 			// Interpolated JS string - can access value
-			scaleLabel: "<%=value%>",
+			scaleLabel: "<%=value%>", 
 
 			// Boolean - Whether the scale should stick to integers, and not show any floats even if drawing space is there
 			scaleIntegersOnly: true,
@@ -97,10 +97,10 @@
 			scaleBeginAtZero: false,
 
 			// String - Scale label font declaration for the scale label
-			scaleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+			scaleFontFamily: "'Source Sans Pro', Helvetica', 'Arial', sans-serif",
 
 			// Number - Scale label font size in pixels
-			scaleFontSize: 12,
+			scaleFontSize: 14,
 
 			// String - Scale label font weight style
 			scaleFontStyle: "normal",
@@ -127,19 +127,19 @@
 			tooltipFillColor: "rgba(0,0,0,.6)",
 
 			// String - Tooltip label font declaration for the scale label
-			tooltipFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+			tooltipFontFamily: "'Open Sans', 'Helvetica', 'Arial', sans-serif",
 
 			// Number - Tooltip label font size in pixels
 			tooltipFontSize: 18,
 
 			// String - Tooltip font weight style
-			tooltipFontStyle: "normal",
+			tooltipFontStyle: "lighter",
 
 			// String - Tooltip label font colour
 			tooltipFontColor: "#fff",
 
 			// String - Tooltip title font declaration for the scale label
-			tooltipTitleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+			tooltipTitleFontFamily: "'Open Sans', 'Helvetica', 'Arial', sans-serif",
 
 			// Number - Tooltip title font size in pixels
 			tooltipTitleFontSize: 14,
@@ -151,7 +151,7 @@
 			tooltipTitleFontColor: "#fff",
 
 			// Number - pixel width of padding around tooltip text
-			tooltipYPadding: 6,
+			tooltipYPadding: 4,
 
 			// Number - pixel width of padding around tooltip text
 			tooltipXPadding: 6,

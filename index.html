@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="wraper">
 			<div class="header">
-				<div class="logo"
+				<div class="logo">
 					<a class="logo-link" href="index.html">
 						<img class="logo-link__img" src="images/logo.png" alt="logotype">
 					</a>
@@ -83,7 +83,7 @@
 								<li class="main-menu-list-item">
 									<a href="#" class="main-menu-list-item-link">
 										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_charts"></span>
-										Charts & Statistics
+										Charts &amp; Statistics
 										<span  class="main-menu-list-item-link__dropdown-ico"></span>
 									</a>
 								</li>
@@ -344,7 +344,7 @@
 										</td>
 										<td class="table-support__cell">	
 											<div class="table-support__text">
-												Server error occured. Server error occured. Server error occured. 
+												Server error occured. File cannot be transferred. Please check the issue as soon as possible.
 											</div>
 										</td>
 									</tr>
@@ -357,7 +357,7 @@
 						<div class="bookings">
 							<span class="bookings__title">Bookings and Visitors</span>
 							<div class="bookings-chart">
-								<div style="width: 90%">
+								<div style="width: 90%; margin-right: 10px;">
 									<div>
 										<canvas id="canvas" height="360" width="600"></canvas>
 									</div>
@@ -367,17 +367,78 @@
 						<div class="traffic">
 							<span class="traffic__title">Traffic</span>
 							<div class="traffic-chart">
-									<canvas class="traffic-chart__donught" id="chart-area"></canvas>
+								<div class="traffic__caption">
+									October 11 2014
+								</div>
+								<canvas class="traffic-chart__donught" id="chart-area"></canvas>
+								<button class="traffic__button-details">View details</button>
+								<button class="traffic__button-previous">View previous</button>
 							</div>
 						</div>
 					</div>
 					<div class="separator"></div>
 					<div class="main-todolist">
-						To do list & Calendar<br>
+						<div class="todolist">
+							<header class="todolist__header">
+								To do list &amp; Calendar
+							</header>
+							<h4 class="todolist__info">
+								Todo list can be reordered by drag &amp; drop, you can mark them as important
+							</h4>
+							<div class="tasks">
+								<div class="tasks-add">
+									<input type="text" class="tasks-add__input" placeholder="Add a new task here...">
+									<a href=""><span class="tasks-add__plus"></span></a>
+								</div>								
+								<p class="tasks__day">Today</p>
+								<ul class="tasks-list">
+									<li class="tasks-item active">
+										<input type="checkbox" name="Client" id="Client" class="tasks__checkbox">
+										<span class="tasks__caption">Client meeting at 5 pm</span>
+									</li>
+									<li class="tasks-item checked">
+										<input type="checkbox" name="Weekly" id="Weekly" class="tasks__checkbox">
+										<span class="tasks__caption">Weekly schedules to be updated</span>
+									</li>
+									<li class="tasks-item checked">
+										<input type="checkbox" name="Design" id="Design" class="tasks__checkbox">
+										<span class="tasks__caption">Design team meeting at 2 pm</span>
+									</li>
+								</ul>								
+								<p class="tasks__day">Wed, Oct, 2014</p>
+								<ul class="tasks-list">
+									<li class="tasks-item">
+										<input type="checkbox" name="Client" id="Client" class="tasks__checkbox">
+										<span class="tasks__caption">Client meeting at 5 pm</span>
+									</li>
+									<li class="tasks-item active">
+										<input type="checkbox" name="Weekly" id="Weekly" class="tasks__checkbox">
+										<span class="tasks__caption">Weekly schedules to be updated</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="calendar">
+						<!-- It's a nice place for calendar -->
+						</div>
+						<div class="separate"></div>
+
+						<div class="forms">
+							<header class="forms__header">
+								Chat &amp; e-mail
+							</header>
+							<h4 class="forms__info">
+								You can send some message in chat below!
+							</h4>
+							<div class="chat">
+							</div>
+						</div>
+						<div class="email">
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="footer">Copy right 2014 All Rights Reserved.</div>
+			<footer class="footer">Copy right 2014 All Rights Reserved.</footer>
 		</div>
 	</div>
 </body>

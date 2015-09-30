@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,200,400italic);
 body {
   background-color: #ececec;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #787878;
 }
 
@@ -580,7 +580,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .menu-list-item-link__message {
   background-image: url("sources/sprite.png");
-  background-position: -30px -68px;
+  background-position: -60px -68px;
   width: 20px;
   height: 20px;
 }
@@ -590,8 +590,8 @@ The `sprites` mixin generates identical output to the CSS template
   position: absolute;
   top: -10px;
   margin-left: 12px;
-  padding: 2px 6px;
-  font-size: .75em;
+  padding: 3px 6px;
+  font-size: .6em;
   border-radius: 50%;
   background-color: #e06d6a;
   color: #fff;
@@ -609,8 +609,8 @@ The `sprites` mixin generates identical output to the CSS template
   position: absolute;
   top: -10px;
   margin-left: 10px;
-  padding: 2px 6px;
-  font-size: .75em;
+  padding: 3px 6px;
+  font-size: .6em;
   border-radius: 50%;
   background-color: #e06d6a;
   color: #fff;
@@ -636,7 +636,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .menu-list-item-link__user::after {
   background-image: url("sources/sprite.png");
-  background-position: -70px -154px;
+  background-position: -96px -128px;
   width: 9px;
   height: 5px;
   content: "";
@@ -733,11 +733,11 @@ The `sprites` mixin generates identical output to the CSS template
 
 .main-bookmarks {
   height: 415px;
-  padding: 18px 25px 18px 18px;
+  padding: 26px;
 }
 
 .main-todolist {
-  height: 1080px;
+  height: 1105px;
   padding: 26px;
 }
 
@@ -778,45 +778,26 @@ The `sprites` mixin generates identical output to the CSS template
 @include sprites($spritesheet-sprites);
 */
 
-.top-content,
-.table-upload__popup,
-.table-upload__close,
-.table-support-img.sucsess::after,
-.table-support-img.error::after,
-.tasks-add,
-.separate {
+.top-content {
   *zoom: 1;
 }
 
 .top-content:before,
-.table-upload__popup:before,
-.table-upload__close:before,
-.tasks-add:before,
-.separate:before,
-.top-content:after,
-.table-upload__popup:after,
-.table-upload__close:after,
-.tasks-add:after,
-.separate:after {
+.top-content:after {
   content: " ";
   display: table;
 }
 
-.top-content:after,
-.table-upload__popup:after,
-.table-upload__close:after,
-.tasks-add:after,
-.separate:after {
+.top-content:after {
   clear: both;
 }
 
 .top-content {
-  padding: 18px 18px 12px 30px;
+  padding: 18px 18px 13px 30px;
 }
 
 .top-content-left {
   float: left;
-  padding-top: 10px;
 }
 
 .top-content-left__icon {
@@ -825,7 +806,7 @@ The `sprites` mixin generates identical output to the CSS template
   width: 24px;
   height: 22px;
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .top-content-left__caption {
@@ -841,8 +822,8 @@ The `sprites` mixin generates identical output to the CSS template
 .top-content-right-menu {
   margin: 0;
   padding: 0;
-  background: #e06d6a;
   list-style: none;
+  background: #e06d6a;
 }
 
 .top-content-right-menu-item {
@@ -858,30 +839,30 @@ The `sprites` mixin generates identical output to the CSS template
 
 .top-content-right-menu-item__icon {
   background-image: url("sources/sprite.png");
-  background-position: -29px -98px;
+  background-position: -135px -31px;
   width: 17px;
   height: 17px;
+  display: inline-block;
   position: relative;
   top: 4px;
-  display: inline-block;
   margin-right: 5px;
 }
 
 .top-content-right-menu-item__link {
+  text-decoration: none;
   font-size: 12px;
   color: #fff;
-  text-decoration: none;
 }
 
 .top-content-right-menu-item__link_dropdown::after {
   background-image: url("sources/sprite.png");
-  background-position: -70px -154px;
+  background-position: -96px -128px;
   width: 9px;
   height: 5px;
   content: "";
+  display: inline-block;
   position: relative;
   top: -1px;
-  display: inline-block;
   margin-left: 3px;
 }
 
@@ -902,10 +883,10 @@ The `sprites` mixin generates identical output to the CSS template
 .middle-content-info-item {
   display: inline-block;
   height: 90px;
-  width: 200px;
   margin-left: 32px;
-  border-radius: 4px;
+  width: 200px;
   background: #6dadbd;
+  border-radius: 4px;
 }
 
 .middle-content-info-item:first-child {
@@ -927,24 +908,24 @@ The `sprites` mixin generates identical output to the CSS template
 .middle-content-info-item__caption {
   display: block;
   margin: 10px 0 0 12px;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
   text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .middle-content-info-item__value {
   padding: 12px;
-  color: #fff;
   font-size: 20px;
   font-weight: 100;
+  color: #fff;
 }
 
 .middle-content-info-item__details {
   display: block;
   margin: 4px 0 0 12px;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
   text-decoration: none;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .middle-content-tables {
@@ -955,267 +936,17 @@ The `sprites` mixin generates identical output to the CSS template
 .middle-content-tables-browsers,
 .middle-content-tables-support {
   display: inline-block;
-  height: 170px;
-  width: 31%;
-  margin-left: 2.6%;
-  overflow: hidden;
-  border: 1px solid #d9d9d9;
+  height: 160px;
+  width: 260px;
+  padding: 10px;
   background-color: #fff;
+  border: 1px solid #d9d9d9;
   border-radius: 4px;
+  margin-left: 27px;
 }
 
 .middle-content-tables-upload {
-  margin: 0;
-}
-
-.table-upload {
-  width: 100%;
-}
-
-.table-upload__row {
-  border-bottom: 1px solid #d9d9d9;
-}
-
-.table-upload__row_last {
-  border-bottom: none;
-}
-
-.table-upload__cell {
-  padding: 5px;
-}
-
-.table-upload__popup {
-  background-image: url("sources/sprite.png");
-  background-position: -151px -128px;
-  width: 10px;
-  height: 6px;
-  display: inline-block;
-  float: right;
-  margin: 4px;
-}
-
-.table-upload__close {
-  background-image: url("sources/sprite.png");
-  background-position: -171px -128px;
-  width: 6px;
-  height: 6px;
-  display: inline-block;
-  float: right;
-  margin: 4px;
-}
-
-.table-upload-right {
-  margin-left: 25px;
-}
-
-.table-upload-right__file-name {
-  font-size: 14px;
-}
-
-.table-upload-right__file-size {
-  display: block;
-  margin-top: 5px;
-  font-size: 11px;
-}
-
-.table-upload__upload {
-  background-image: url("sources/sprite.png");
-  background-position: -189px -98px;
-  width: 10px;
-  height: 11px;
-  display: inline-block;
-  float: left;
-  margin: 4px;
-}
-
-.table-upload__mark {
-  background-image: url("sources/sprite.png");
-  background-position: -189px -78px;
-  width: 12px;
-  height: 10px;
-  display: inline-block;
-  float: left;
-  margin: 4px;
-}
-
-.table-upload-progress {
-  height: 13px;
-  margin: 8px 25px;
-  overflow: hidden;
-  background-color: #eae8e8;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.table-upload-progress-bar {
-  width: 0;
-  height: 100%;
-  color: #fff;
-  background-color: #5bb85b;
-  -webkit-animation: complete 1500ms;
-          animation: complete 1500ms;
-  text-align: center;
-}
-
-.table-upload-progress-striped .table-upload-progress-bar {
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 30px 30px;
-  font-size: 9px;
-}
-
-.table-browsers {
-  width: 100%;
-  line-height: 20px;
-  text-align: center;
-}
-
-.table-browsers__row :first-child {
-  border-left: none;
-}
-
-.table-browsers__row :last-child {
-  border-right: none;
-}
-
-.table-browsers__cell {
-  padding: 3px 5px 4px;
-  border: 1px solid #d9d9d9;
-}
-
-.table-browsers__cell_top {
-  border-top: none;
-}
-
-.table-browsers__cell_bottom {
-  border-bottom: none;
-}
-
-.table-browsers__cell_chrome {
-  background-image: url("sources/sprite.png");
-  background-position: -83px -98px;
-  width: 17px;
-  height: 17px;
-  display: block;
-}
-
-.table-browsers__cell_firefox {
-  background-image: url("sources/sprite.png");
-  background-position: 0px -128px;
-  width: 16px;
-  height: 16px;
-  display: block;
-}
-
-.table-browsers__cell_ie {
-  background-image: url("sources/sprite.png");
-  background-position: 0px -98px;
-  width: 19px;
-  height: 20px;
-  display: block;
-}
-
-.table-browsers__cell_safari {
-  background-image: url("sources/sprite.png");
-  background-position: -120px -68px;
-  width: 19px;
-  height: 20px;
-  display: block;
-}
-
-.table-browsers__browser-icons {
-  margin: auto;
-}
-
-.browser-type {
-  padding-left: 18px;
-  font-size: 14px;
-  text-align: left;
-}
-
-.table-support {
-  font-size: 14px;
-  line-height: 14px;
-}
-
-.table-support_remove,
-.table-support_reply {
-  display: inline-block;
-  float: right;
-  margin: 4px 2px;
-}
-
-.table-support_remove {
-  background-image: url("sources/sprite.png");
-  background-position: -189px 0px;
-  width: 14px;
-  height: 14px;
-}
-
-.table-support_reply {
-  background-image: url("sources/sprite.png");
-  background-position: -189px -137px;
-  width: 12px;
-  height: 8px;
-  margin-top: 8px;
-}
-
-.table-support__text {
-  padding: 6px 2px 8px 4px;
-}
-
-.table-support__row {
-  border-bottom: 1px solid #d9d9d9;
-}
-
-.table-support__row_active {
-  background: #f9f9f9;
-}
-
-.table-support__row_last {
-  border: none;
-}
-
-.table-support-img {
-  padding: 5px 0 5px 5px;
-}
-
-.table-support-img.sucsess::after {
-  content: "";
-  position: relative;
-  display: block;
-  height: 8px;
-  width: 8px;
-  margin-left: 22px;
-  top: -2px;
-  background: #6dbe6d;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-.table-support-img.error::after {
-  content: "";
-  position: relative;
-  display: block;
-  height: 8px;
-  width: 8px;
-  margin-left: 22px;
-  top: -2px;
-  background: #ff2002;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-.table-support-img__link {
-  display: block;
-  float: left;
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  background: url("../../../../images/photo.jpg") no-repeat center;
-}
-
-.table-support-img__link_other {
-  background: url("../../../../images/photo_.jpg") no-repeat center;
+  margin-left: 0;
 }
 
 .load-line {
@@ -1233,13 +964,13 @@ The `sprites` mixin generates identical output to the CSS template
   height: 100%;
   width: 0;
   background-color: #fff;
-  -webkit-animation: complete 2500ms;
-          animation: complete 2500ms;
+  -webkit-animation: loader 2500ms;
+          animation: loader 2500ms;
 }
 
 .bookings {
   float: left;
-  width: 46%;
+  width: 48%;
 }
 
 .bookings__title {
@@ -1247,10 +978,10 @@ The `sprites` mixin generates identical output to the CSS template
   margin-bottom: 18px;
 }
 
-.bookings-chart {
-  height: 255px;
-  padding: 65px 0 0 30px;
-  background: #1d89cf;
+.bookings__chart {
+  height: 320px;
+  width: 100%;
+  border: 1px solid #d9d9d9;
 }
 
 .traffic {
@@ -1263,198 +994,19 @@ The `sprites` mixin generates identical output to the CSS template
   margin-bottom: 18px;
 }
 
-.traffic-chart {
-  height: 319px;
+.traffic__chart {
+  height: 320px;
   width: 100%;
   border: 1px solid #d9d9d9;
 }
 
-.traffic__caption {
-  padding: 10px 15px;
-  color: #e06d6a;
-  font-weight: 700;
-}
-
-.traffic__button-details {
-  margin: 0 0 -15px 15px;
-  padding: 6px 12px;
-  border: none;
-  outline: none;
-  background: #e06d6a;
-  cursor: pointer;
-  font-weight: lighter;
-  color: #fff;
-}
-
-.traffic__button-previous {
-  float: right;
-  margin: 0 15px -15px 0;
-  padding: 6px 12px;
-  border: none;
-  outline: none;
-  background: #49bf67;
-  cursor: pointer;
-  font-weight: lighter;
-  color: #fff;
-}
-
-/*-------------------------------------*/
-
-.todolist {
-  text-align: center;
-}
-
-.todolist__header {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.todolist__info {
-  margin-top: 5px;
-  margin-bottom: 30px;
-  font-size: 12px;
-  font-weight: 300;
-  color: #7a7a7a;
-}
-
-.tasks {
-  float: left;
-  height: 435px;
-  width: 415px;
-  border: 1px solid #d9d9d9;
-  background: #fff;
-  text-align: left;
-}
-
-.tasks-add__input {
-  display: block;
-  float: left;
-  border: none;
-  border-bottom: 1px solid #d9d9d9;
-  outline: none;
-  height: 45px;
-  width: 340px;
-  padding-left: 20px;
-  font-style: italic;
-  font-size: 14px;
-  font-weight: 100;
-  border-right: 55px solid #49bf67;
-}
-
-.tasks-add__input:-moz-placeholder {
-  color: #d4d4d4;
-  text-align: left;
-}
-
-.tasks-add__input::-webkit-input-placeholder {
-  color: #d4d4d4;
-  text-align: left;
-}
-
-.tasks-add__plus {
-  background-image: url("sources/sprite.png");
-  background-position: -71px -31px;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  display: block;
-  margin: 12px 377px;
-}
-
-.tasks__day {
-  margin-left: 20px;
-  font-size: 14px;
-  color: #e06d6a;
-}
-
-.tasks-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.tasks-item {
-  border-bottom: 1px solid #d9d9d9;
-  border-left: 2px solid #fff;
-  line-height: 50px;
-}
-
-.tasks-item.active,
-.tasks-item:hover {
-  background: #f9f9f9;
-  border-left: 2px solid #4d7496;
-}
-
-.tasks-item.checked {
-  color: #d4d4d4;
-}
-
-.tasks__checkbox {
-  margin-left: 20px;
-  vertical-align: middle;
-}
-
-.tasks__caption {
-  padding-left: 10px;
-  font-size: 14px;
-  vertical-align: middle;
-}
-
-.calendar {
-  height: 435px;
-  width: 430px;
-  background: #fff;
-  border: 1px solid #d9d9d9;
-  text-align: left;
-  float: right;
-  margin-bottom: 30px;
-}
-
-/*------------------------------------------------*/
-
-.forms {
-  text-align: center;
-}
-
-.forms__header {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.forms__info {
-  font-size: 12px;
-  color: #7a7a7a;
-  font-weight: 300;
-  margin-bottom: 30px;
-  margin-bottom: 30px;
-  margin-top: 5px;
-}
-
-.chat {
-  height: 425px;
-  width: 415px;
-  background: #fff;
-  border: 1px solid #d9d9d9;
-  text-align: left;
-  float: left;
-}
-
-.email {
-  height: 425px;
-  width: 430px;
-  background: #fff;
-  border: 1px solid #d9d9d9;
-  text-align: left;
-  float: right;
-}
-
-@-webkit-keyframes complete {
+@-webkit-keyframes loader {
   from {
     width: 0;
   }
 }
 
-@keyframes complete {
+@keyframes loader {
   from {
     width: 0;
   }
@@ -1516,8 +1068,13 @@ The `sprites` mixin generates identical output to the CSS template
   height: 73px;
   width: 73px;
   border: 5px solid #eaeaea;
-  border-radius: 50%;
-  background: url("../../../../images/profile_photo.jpg") no-repeat center;
+  border-radius: 100%;
+  background: url("img/profile_photo.jpg") no-repeat center;
+}
+
+.profile-link__img {
+  opacity: 0;
+  filter: alpha(opacity=0);
 }
 
 .profile-info {
@@ -1539,10 +1096,10 @@ The `sprites` mixin generates identical output to the CSS template
   position: absolute;
   height: 8px;
   width: 8px;
-  margin-top: 5px;
+  margin-top: 4px;
   margin-left: -10px;
   background-color: #0f724a;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 .search {
@@ -1564,7 +1121,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .search__icon {
   background-image: url("sources/sprite.png");
-  background-position: -60px -68px;
+  background-position: -30px -68px;
   width: 20px;
   height: 20px;
   position: relative;
@@ -1607,7 +1164,7 @@ The `sprites` mixin generates identical output to the CSS template
   display: inline-block;
   margin: 6px -6px 6px 0;
   background-image: url("sources/sprite.png");
-  background-position: -189px -155px;
+  background-position: -189px -145px;
   width: 12px;
   height: 6px;
 }
@@ -1620,35 +1177,35 @@ The `sprites` mixin generates identical output to the CSS template
 
 .main-menu-list-item-link__ico_dashboard {
   background-image: url("sources/sprite.png");
-  background-position: -52px -128px;
+  background-position: -162px -98px;
   width: 16px;
   height: 15px;
 }
 
 .main-menu-list-item-link__ico_ui {
   background-image: url("sources/sprite.png");
-  background-position: -136px -31px;
+  background-position: -105px -31px;
   width: 20px;
   height: 17px;
 }
 
 .main-menu-list-item-link__ico_tables {
   background-image: url("sources/sprite.png");
-  background-position: -137px -98px;
+  background-position: -83px -98px;
   width: 17px;
   height: 16px;
 }
 
 .main-menu-list-item-link__ico_charts {
   background-image: url("sources/sprite.png");
-  background-position: -189px -24px;
+  background-position: -24px -179px;
   width: 14px;
   height: 14px;
 }
 
 .main-menu-list-item-link__ico_mail {
   background-image: url("sources/sprite.png");
-  background-position: -104px -128px;
+  background-position: -26px -128px;
   width: 19px;
   height: 12px;
   margin-top: 2px;
@@ -1656,7 +1213,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .main-menu-list-item-link__ico_pages {
   background-image: url("sources/sprite.png");
-  background-position: -44px -154px;
+  background-position: -24px -153px;
   width: 16px;
   height: 13px;
   margin-top: 2px;
@@ -1664,7 +1221,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .main-menu-list-item-link__ico_level {
   background-image: url("sources/sprite.png");
-  background-position: -78px -128px;
+  background-position: 0px -128px;
   width: 16px;
   height: 15px;
 }

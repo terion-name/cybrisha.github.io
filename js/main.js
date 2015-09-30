@@ -30,6 +30,7 @@ var doughnutData = [
 			label: "Unique Users"
 		}
 	];
+
 var lineChartData = {
 	labels : ["12","13","14","15","16","17"],
 	datasets : [
@@ -40,13 +41,15 @@ var lineChartData = {
 			pointStrokeColor : "#fff",
 			pointHighlightFill : "#fff",
 			pointHighlightStroke : "rgba(220,220,220,1)",
-			data : [8, 20, 40, 40, 45, 44]
-		}
+			data : [[8, "aaaa"], 20, 40, 40, 45, 44]
+		},
 	]
 }
+
 window.onload = function(){
 	var ctx = document.getElementById("chart-area").getContext("2d");
-	window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+	window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true, tooltipCaretSize: 0, tooltipCornerRadius: 0});
+
 	var ctx = document.getElementById("canvas").getContext("2d");
-	window.myLine = new Chart(ctx).Line(lineChartData, {responsive: true});
+	window.myLine = new Chart(ctx).Line(lineChartData, {responsive: true, tooltipFillColor: "#485a76", tooltipFontSize: 14,  });
 }
