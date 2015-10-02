@@ -784,7 +784,10 @@ The `sprites` mixin generates identical output to the CSS template
 .table-support-img.sucsess::after,
 .table-support-img.error::after,
 .tasks-add,
-.separate {
+.separate,
+.chat-list-item,
+.chat-message,
+.email-message {
   *zoom: 1;
 }
 
@@ -793,11 +796,17 @@ The `sprites` mixin generates identical output to the CSS template
 .table-upload__close:before,
 .tasks-add:before,
 .separate:before,
+.chat-list-item:before,
+.chat-message:before,
+.email-message:before,
 .top-content:after,
 .table-upload__popup:after,
 .table-upload__close:after,
 .tasks-add:after,
-.separate:after {
+.separate:after,
+.chat-list-item:after,
+.chat-message:after,
+.email-message:after {
   content: " ";
   display: table;
 }
@@ -806,7 +815,10 @@ The `sprites` mixin generates identical output to the CSS template
 .table-upload__popup:after,
 .table-upload__close:after,
 .tasks-add:after,
-.separate:after {
+.separate:after,
+.chat-list-item:after,
+.chat-message:after,
+.email-message:after {
   clear: both;
 }
 
@@ -991,7 +1003,7 @@ The `sprites` mixin generates identical output to the CSS template
   height: 6px;
   display: inline-block;
   float: right;
-  margin: 4px;
+  margin: 6px 4px 0 0;
 }
 
 .table-upload__close {
@@ -1001,7 +1013,7 @@ The `sprites` mixin generates identical output to the CSS template
   height: 6px;
   display: inline-block;
   float: right;
-  margin: 4px;
+  margin: 6px 4px 0 0;
 }
 
 .table-upload-right {
@@ -1039,7 +1051,7 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 .table-upload-progress {
-  height: 13px;
+  height: 14px;
   margin: 8px 25px;
   overflow: hidden;
   background-color: #eae8e8;
@@ -1050,6 +1062,7 @@ The `sprites` mixin generates identical output to the CSS template
 .table-upload-progress-bar {
   width: 0;
   height: 100%;
+  line-height: 15px;
   color: #fff;
   background-color: #5bb85b;
   -webkit-animation: complete 1500ms;
@@ -1530,10 +1543,9 @@ The `sprites` mixin generates identical output to the CSS template
 
 .calendar-notification {
   position: relative;
-  top: 24px;
+  top: 25px;
   line-height: 50px;
   background: #e06d6a;
-  vertical-align: middle;
   font-size: 14px;
   color: #fff;
 }
@@ -1547,13 +1559,10 @@ The `sprites` mixin generates identical output to the CSS template
   margin-right: 20px;
 }
 
-.forms {
-  text-align: center;
-}
-
 .forms__header {
   font-size: 24px;
   font-weight: 700;
+  text-align: center;
 }
 
 .forms__info {
@@ -1563,15 +1572,148 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 12px;
   font-weight: 300;
   color: #7a7a7a;
+  text-align: center;
 }
 
 .chat {
+  float: left;
   height: 425px;
   width: 415px;
   background: #fff;
   border: 1px solid #d9d9d9;
-  text-align: left;
+  overflow: hidden;
+}
+
+.chat-title {
   float: left;
+  width: 100%;
+  line-height: 50px;
+  background: #00acec;
+}
+
+.chat-title__icon {
+  background-image: url("sources/sprite.png");
+  background-position: 0px -31px;
+  width: 27px;
+  height: 27px;
+  display: block;
+  float: left;
+  margin: 12px 10px 0 10px;
+}
+
+.chat-title__caption {
+  color: #fff;
+  vertical-align: middle;
+}
+
+.chat-title__popup,
+.chat-title__close {
+  background-image: url("sources/sprite.png");
+  background-position: -166px -31px;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  float: right;
+  margin: 23px 5px 0 0;
+}
+
+.chat-title__popup {
+  background-image: url("sources/sprite.png");
+  background-position: -189px -119px;
+  width: 13px;
+  height: 8px;
+  margin-right: 15px;
+}
+
+.chat-people {
+  margin-top: 10px;
+  border-top: 1px solid #d9d9d9;
+}
+
+.chat-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chat-list-item {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.chat-list-item:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+.chat-list-item__img {
+  display: block;
+  float: left;
+  height: 40px;
+  width: 40px;
+  margin: 10px 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: url("../../../../images/photo-a.jpg") no-repeat center;
+}
+
+.chat-list-item__img.other {
+  background: url("../../../../images/photo-b.jpg") no-repeat center;
+}
+
+.chat-list-item__name {
+  margin: 10px 0 0 0;
+  color: #4d7496;
+}
+
+.chat-list-item__info {
+  margin: 0 0 5px 5px;
+  font-size: 12px;
+  color: #555555;
+}
+
+.chat-list-item__time {
+  float: right;
+  margin-right: 20px;
+  font-size: 11px;
+  color: #ced2de;
+}
+
+.chat-message {
+  position: relative;
+}
+
+.chat-message__input {
+  display: block;
+  float: left;
+  border: none;
+  outline: none;
+  height: 55px;
+  width: 340px;
+  padding-left: 20px;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.chat-message__input:-moz-placeholder {
+  color: #d4d4d4;
+  text-align: left;
+}
+
+.chat-message__input::-webkit-input-placeholder {
+  color: #d4d4d4;
+  text-align: left;
+}
+
+.chat-message__send {
+  position: absolute;
+  display: block;
+  height: 28px;
+  width: 70px;
+  margin: 15px 330px;
+  outline: none;
+  border: none;
+  background: #00acec;
+  color: #fff;
 }
 
 .email {
@@ -1581,6 +1723,143 @@ The `sprites` mixin generates identical output to the CSS template
   border: 1px solid #d9d9d9;
   text-align: left;
   float: right;
+}
+
+.email-title {
+  line-height: 50px;
+  float: left;
+  width: 100%;
+  background: #00acec;
+}
+
+.email-title__icon {
+  background-image: url("sources/sprite.png");
+  background-position: -102px -31px;
+  width: 24px;
+  height: 17px;
+  display: block;
+  float: left;
+  margin: 18px 10px 0 10px;
+}
+
+.email-title__caption {
+  color: #fff;
+  vertical-align: middle;
+}
+
+.email-title__popup,
+.email-title__close {
+  background-image: url("sources/sprite.png");
+  background-position: -166px -31px;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  float: right;
+  margin: 23px 5px 0 0;
+}
+
+.email-title__popup {
+  background-image: url("sources/sprite.png");
+  background-position: -189px -119px;
+  width: 13px;
+  height: 8px;
+  margin-right: 15px;
+}
+
+.email-form {
+  width: 400px;
+  height: 300px;
+  margin: 65px auto 0;
+}
+
+.email-form__to,
+.email-form__subject,
+.email-form__text {
+  display: block;
+  width: 388px;
+  padding-left: 12px;
+  outline: none;
+  border: 1px solid #d9d9d9;
+}
+
+.email-form__to:-moz-placeholder,
+.email-form__subject:-moz-placeholder,
+.email-form__text:-moz-placeholder {
+  color: #d4d4d4;
+  text-align: left;
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+.email-form__to::-webkit-input-placeholder,
+.email-form__subject::-webkit-input-placeholder,
+.email-form__text::-webkit-input-placeholder {
+  color: #d4d4d4;
+  text-align: left;
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+.email-form__to,
+.email-form__subject {
+  height: 35px;
+  margin-bottom: 30px;
+}
+
+.email-form__text {
+  padding: 0;
+  padding-left: 12px;
+  padding-top: 8px;
+  height: 155px;
+  border: 1px solid #d9d9d9;
+  resize: none;
+}
+
+.email-form__text:-moz-placeholder {
+  font-style: italic;
+}
+
+.email-form__text::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+.email-message {
+  position: relative;
+  margin-top: 20px;
+}
+
+.email-message__clip,
+.email-message__edit {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 15px;
+  margin-left: 20px;
+  cursor: pointer;
+  background-image: url("sources/sprite.png");
+  background-position: -164px -98px;
+  width: 14px;
+  height: 16px;
+}
+
+.email-message__clip {
+  margin-left: 8px;
+  background-image: url("sources/sprite.png");
+  background-position: -189px -48px;
+  width: 9px;
+  height: 20px;
+}
+
+.email-message__send {
+  position: absolute;
+  display: inline-block;
+  height: 28px;
+  width: 70px;
+  margin: -2px 292px;
+  outline: none;
+  border: none;
+  background: #00acec;
+  color: #fff;
 }
 
 @-webkit-keyframes complete {
