@@ -1,606 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<title>DashBoard</title>
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="styles/main.min.css">
-	<script src="js/jquery-1.11.3.js"></script>
-	<script src="js/Chart.js"></script>
-	<script src="js/main.js"></script>
+    <meta charset="UTF-8">
+    <title>What we do</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .wrapper {
+            margin: auto;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
-	<div class="container">
-		<div class="wraper">
-			<div class="header">
-				<div class="logo">
-					<a class="logo-link" href="index.html">
-						<img class="logo-link__img" src="images/logo.png" alt="logotype">
-					</a>
-				</div>
-				<div class="menu">
-					<ul class="menu-list">
-						<li class="menu-list-item">
-							<a href="#" class="menu-list-item-link">
-								<span class="menu-list-item-link__message menu-list-item-link__message-incomming"></span>
-							</a>
-						</li>
-						<li class="menu-list-item">
-							<a href="#" class="menu-list-item-link">
-								<span class="menu-list-item-link__notification  menu-list-item-link__notification-incomming"></span>
-							</a>
-						</li>
-						<li class="menu-list-item">
-							<a href="#" class="menu-list-item-link">
-								<span class="menu-list-item-link__tools"></span>
-							</a>
-						</li>
-						<li class="menu-list-item">
-							<a href="#" class="menu-list-item-link">
-								<span class="menu-list-item-link__user">Joey Bing</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="content">
-				<div class="sidebar">
-					<div class="sidebar-top">
-						<div class="profile">
-							<a href="#" class="profile-link"></a>
-							<div class="profile-info">
-								<div class="profile-info__name">Welcome Joey</div>
-								<div class="profile-info__status profile-info__status_online">Online</div>
-							</div>
-						</div>
-						<div class="search">
-							<input type="text" placeholder="Search" class="search__field">
-							<span class="search__icon"></span>
-						</div>
-						<div class="main-menu">
-							<ul class="main-menu-list">
-								<li class="main-menu-list-item main-menu-list-item_active">
-									<a href="#" class="main-menu-list-item-link">
-										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_dashboard"></span>
-										Dashboard
-										<span  class="main-menu-list-item-link__dropdown-ico"></span>
-									</a>
-								</li>
-								<li class="main-menu-list-item">
-									<a href="#" class="main-menu-list-item-link">
-										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_ui"></span>
-										UI elements
-										<span  class="main-menu-list-item-link__dropdown-ico"></span>
-									</a>
-								</li>
-								<li class="main-menu-list-item">
-									<a href="#" class="main-menu-list-item-link">
-										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_tables"></span>
-										Tables
-										<span  class="main-menu-list-item-link__dropdown-ico"></span>
-									</a>
-								</li>
-								<li class="main-menu-list-item">
-									<a href="#" class="main-menu-list-item-link">
-										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_charts"></span>
-										Charts &amp; Statistics
-										<span  class="main-menu-list-item-link__dropdown-ico"></span>
-									</a>
-								</li>
-								<li class="main-menu-list-item">
-									<a href="#" class="main-menu-list-item-link">
-										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_mail"></span>
-										Mail
-										<span  class="main-menu-list-item-link__dropdown-ico"></span>
-										<span class="main-menu-list-item-link__title">24 New</span>
-									</a>
-								</li>
-								<li class="main-menu-list-item">
-									<a href="#" class="main-menu-list-item-link">
-										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_pages"></span>
-										Pages
-										<span  class="main-menu-list-item-link__dropdown-ico"></span>
-									</a>
-								</li>
-								<li class="main-menu-list-item">
-									<a href="#" class="main-menu-list-item-link">
-										<span class="main-menu-list-item-link__ico main-menu-list-item-link__ico_level"></span>
-										Four level dropdown
-										<span  class="main-menu-list-item-link__dropdown-ico"></span>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="separator"></div>
-					<div class="sidebar-bottom">
-						<div class="system-statistics">
-							<span class="system-statistics__title">System Statistics</span>
-							<div class="system-statistics-circular" data-percent="32">
-								<div class="system-statistics-circular-progress">
-									<div class="system-statistics-circular-progress__fill"></div>
-								</div>
-								<div class="system-statistics-circular-percents">
-									<div class="system-statistics-circular-percents-wrapper">
-										<span class="system-statistics-circular-percents__value">%</span>
-									</div>
-								</div>
-							</div>
-							<span class="system-statistics__legend">Server Load</span>
-							<div class="system-statistics__line">
-							</div>
-							<div class="system-statistics-loadbar">
-								<div class="system-statistics-loadbar-storage">
-									<span class="system-statistics-loadbar-storage__title">Storage - 68%</span>
-									<div class="system-statistics-loadbar-storage-progress">
-										<div  class="system-statistics-loadbar-storage-progress__bar" style="width: 68%"></div>
-									</div>
-								</div>
-								<div class="system-statistics-loadbar-bandwidth">
-									<span class="system-statistics-loadbar-bandwidth__title">Bandwidth - 42%</span>
-									<div class="system-statistics-loadbar-bandwidth-progress">
-										<div  class="system-statistics-loadbar-bandwidth-progress__bar" style="width: 42%"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="main">
-					<div class="main-dashboard">
-						<div class="top-content">
-							<div class="top-content-left">
-								<span class="top-content-left__icon"></span>
-								<span class="top-content-left__caption">Dashboard</span>
-							</div>
-							<div class="top-content-right">
-								<ul class="top-content-right-menu">
-									<li class="top-content-right-menu-item">
-										<a href="#" class="top-content-right-menu-item__link">
-											Last week
-										</a>
-									</li>
-									<li class="top-content-right-menu-item">
-										<a href="#" class="top-content-right-menu-item__link">
-											Tooday
-										</a>
-									</li>
-									<li class="top-content-right-menu-item">
-										<a href="#" class="top-content-right-menu-item__link top-content-right-menu-item__link_dropdown">
-											<span class="top-content-right-menu-item__icon"></span>
-											Custom
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="middle-content">
-							<ul class="middle-content-info">
-								<li class="middle-content-info-item">
-									<span class="middle-content-info-item__caption">New Bookings</span>
-									<span class="middle-content-info-item__value">14,374</span>
-									<div class="load-line">
-										<div class="load-line-progress">
-											<div  class="load-line-progress__bar" style="width: 32%"></div>
-										</div>
-									</div>
-									<a href="#" class="middle-content-info-item__details">View Details</a>
-								</li>
-								<li class="middle-content-info-item middle-content-info-item_profit">
-									<span class="middle-content-info-item__caption">Profit</span>
-									<span class="middle-content-info-item__value">6,21,723</span>
-									<div class="load-line">
-										<div class="load-line-progress">
-											<div  class="load-line-progress__bar" style="width: 60%"></div>
-										</div>
-									</div>
-									<a href="#" class="middle-content-info-item__details">View Details</a>
-								</li>
-								<li class="middle-content-info-item middle-content-info-item_visitors">
-									<span class="middle-content-info-item__caption ">Visitors</span>
-									<span class="middle-content-info-item__value">814,324</span>
-									<div class="load-line">
-										<div class="load-line-progress">
-											<div  class="load-line-progress__bar" style="width: 25%"></div>
-										</div>
-									</div>
-									<a href="#" class="middle-content-info-item__details">View Details</a>
-								</li>
-								<li class="middle-content-info-item middle-content-info-item_views">
-									<span class="middle-content-info-item__caption">Page Views</span>
-									<span class="middle-content-info-item__value">1,37,432</span>
-									<div class="load-line">
-										<div class="load-line-progress">
-											<div  class="load-line-progress__bar" style="width: 45%"></div>
-										</div>
-									</div>
-									<a href="#" class="middle-content-info-item__details">View Details</a>
-								</li>
-							</ul>
-						</div>
-						<div class="middle-content-tables">
-							<div class="middle-content-tables-upload">
-								<table class="table-upload">
-									<tr class="table-upload__row">
-										<td class="table-upload__cell">
-											File upload
-											<span class="table-upload__popup"></span>
-											<span class="table-upload__close"></span>
-										</td>
-									</tr>
-									<tr class="table-upload__row">
-										<td class="table-upload__cell table-upload__cell_left">
-											<span class="table-upload__upload"></span>
-											<div class="table-upload-right">
-												<span class="table-upload-right__file-name">File_booking_details.jpg</span>
-												<span class="table-upload-right__file-size">1.4 of 3MB - 1 min - 1MB/Sec</span>
-											</div>
-											<div class="table-upload-progress table-upload-progress-striped">
-												<div class="table-upload-progress-bar" style="width: 100%">
-													<span>100%</span>
-												</div>
-											</div>
-										</td>
-									</tr>
-									<tr class="table-upload__row table-upload__row_last">
-										<td class="table-upload__cell">
-											<span class="table-upload__mark"></span>
-											<div class="table-upload-right">
-												<span class="table-upload-right__file-name">File_booking_details.jpg</span>
-												<span class="table-upload-right__file-size">7MB - 12 mins - Stopped</span>
-											</div>											
-										</td>
-									</tr>
-								</table>
-							</div>
-							<div class="middle-content-tables-browsers">
-								<table class="table-upload">
-									<tr class="table-upload__row">
-										<td class="table-upload__cell">
-											Browsers
-											<a href="#"><span class="table-upload__popup"></span></a>
-											<a href="#"><span class="table-upload__close"></span></a>
-										</td>
-									</tr>
-								</table>
-								<table class="table-browsers">
-									<tr  class="table-browsers__row">
-										<td class="table-browsers__cell table-browsers__cell_top">Icons</td>
-										<td class="table-browsers__cell table-browsers__cell_top">Browsers</td>
-										<td class="table-browsers__cell table-browsers__cell_top">Visits</td>
-									</tr>
-									<tr class="table-browsers__row">
-										<td class="table-browsers__cell">
-											<span class="table-browsers__cell_chrome table-browsers__browser-icons"></span>
-										</td>
-										<td class="table-browsers__cell browser-type">Google Chrome</td>
-										<td class="table-browsers__cell">4.769</td>
-									</tr>
-									<tr class="table-browsers__row">
-										<td class="table-browsers__cell">
-											<span class="table-browsers__cell_firefox table-browsers__browser-icons"></span>
-										</td>
-										<td class="table-browsers__cell browser-type">FireFox</td>
-										<td class="table-browsers__cell">3.461</td>
-									</tr>
-									<tr class="table-browsers__row">
-										<td class="table-browsers__cell">
-											<span class="table-browsers__cell_ie table-browsers__browser-icons"></span>
-										</td>
-										<td class="table-browsers__cell browser-type">Internet Explorer</td>
-										<td class="table-browsers__cell">1.323</td>
-									</tr>
-									<tr class="table-browsers__row">
-										<td class="table-browsers__cell table-browsers__cell_bottom">
-											<span class="table-browsers__cell_safari table-browsers__browser-icons"></span>
-										</td>
-										<td class="table-browsers__cell table-browsers__cell_bottom browser-type">Safari</td>
-										<td class="table-browsers__cell table-browsers__cell_bottom">6.768</td>
-									</tr>
-								</table>
-							</div>
-							<div class="middle-content-tables-support">
-								<table class="table-upload">
-									<tr class="table-upload__row">
-										<td class="table-upload__cell">
-											Tech Support
-											<a href="#"><span class="table-upload__popup"></span></a>
-											<a href="#"><span class="table-upload__close"></span></a>
-										</td>
-									</tr>
-								</table>
-								<table class="table-support">
-									<tr  class="table-support__row">
-										<td class="table-support__cell">
-											<div class="table-support-img sucsess">
-												<a href="#" class="table-support-img__link"></a>
-											</div>
-										</td>
-										<td class="table-support__cell">
-											<div class="table-support__text">
-												Dashboard error. Look at the issuse.
-											</div>
-										</td>
-									</tr>
-									<tr class="table-support__row table-support__row_active">
-										<td class="table-support__cell">
-											<div class="table-support-img error">
-												<a href="#" class="table-support-img__link table-support-img__link_other"></a>
-											</div>
-										</td>
-										<td class="table-support__cell">
-											<div class="table-support__text">
-												Mobile application error, look after the problems and do rectify it.
-												<a href="#"><span class="table-support_remove"></span></a>
-												<a href="#"><span class="table-support_reply"></span></a>
-											</div>
-										</td>
-									</tr>
-									<tr class="table-support__row table-support__row_last">
-										<td class="table-support__cell">
-											<div class="table-support-img succsess sucsess">
-												<a href="#" class="table-support-img__link"></a>
-											</div>
-										</td>
-										<td class="table-support__cell">	
-											<div class="table-support__text">
-												Server error occured. File cannot be transferred. Please check the issue as soon as possible.
-											</div>
-										</td>
-									</tr>
-								</table>
-							</div>
-						</div>
-					</div>
-					<div class="separator"></div>
-					<div class="main-bookmarks">
-						<div class="bookings">
-							<span class="bookings__title">Bookings and Visitors</span>
-							<div class="bookings-chart">
-								<div style="width: 90%; margin-right: 10px;">
-									<div>
-										<canvas id="canvas" height="360" width="600"></canvas>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="traffic">
-							<span class="traffic__title">Traffic</span>
-							<div class="traffic-chart">
-								<div class="traffic__caption">
-									October 11 2014
-								</div>
-								<canvas class="traffic-chart__donught" id="chart-area"></canvas>
-								<button class="traffic__button-details">View details</button>
-								<button class="traffic__button-previous">View previous</button>
-							</div>
-						</div>
-					</div>
-					<div class="separator"></div>
-					<div class="main-todolist">
-						<div class="todolist">
-							<header class="todolist__header">
-								To do list &amp; Calendar
-							</header>
-							<h4 class="todolist__info">
-								Todo list can be reordered by drag &amp; drop, you can mark them as important
-							</h4>
-							<div class="tasks">
-								<div class="tasks-add">
-									<input type="text" class="tasks-add__input" placeholder="Add a new task here...">
-									<a href=""><span class="tasks-add__plus"></span></a>
-								</div>								
-								<p class="tasks__day">Today</p>
-								<ul class="tasks-list">
-									<li class="tasks-item active">
-										<input type="checkbox" name="item-a" class="tasks__checkbox" id="item-a">
-										<label for="item-a"></label>
-										<span class="tasks__caption">Client meeting at 5 pm</span>
-									</li>
-									<li class="tasks-item">
-										<input type="checkbox" name="item-b" class="tasks__checkbox" id="item-b" checked>
-										<label for="item-b"></label>
-										<span class="tasks__caption">Weekly schedules to be updated</span>
-									</li>
-									<li class="tasks-item">
-										<input type="checkbox" name="item-c" class="tasks__checkbox" id="item-c" checked>
-										<label for="item-c"></label>
-										<span class="tasks__caption">Design team meeting at 2 pm</span>
-									</li>
-								</ul>								
-								<p class="tasks__day">Wed, Oct, 2014</p>
-								<ul class="tasks-list">
-									<li class="tasks-item">
-										<input type="checkbox" name="item-d" class="tasks__checkbox" id="item-d">
-										<label for="item-d"></label>
-										<span class="tasks__caption">Client meeting at 5 pm</span>
-									</li>
-									<li class="tasks-item active">
-										<input type="checkbox" name="item-e" class="tasks__checkbox" id="item-e">
-										<label for="item-e"></label>
-										<span class="tasks__caption">Weekly schedules to be updated</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="calendar">
-							<div class="calendar__month">
-								October 2014
-								<div class="calendar-arrow">
-									<a href="#" class="calendar-arrow-link">
-										<span class="calendar-arrow__left"></span>
-									</a>
-									<a href="#" class="calendar-arrow-link">
-										<span class="calendar-arrow__right"></span>
-									</a>
-								</div>
-							</div>
-							<div class="calendar-base">
-								<table class="calendar-table">
-									<tr class="calendar-table-head">
-										<th class="calendar-table-head__cell">SU</th>
-										<th class="calendar-table-head__cell">MO</th>
-										<th class="calendar-table-head__cell">TU</th>
-										<th class="calendar-table-head__cell">WE</th>
-										<th class="calendar-table-head__cell">TH</th>
-										<th class="calendar-table-head__cell">FR</th>
-										<th class="calendar-table-head__cell">SA</th>
-									</tr>
-									<tr class="calendar-table__row">
-										<td class="calendar-table__cell calendar-table__cell_other-moth">28</td>
-										<td class="calendar-table__cell calendar-table__cell_other-moth">29</td>
-										<td class="calendar-table__cell calendar-table__cell_other-moth">30</td>
-										<td class="calendar-table__cell">1</td>
-										<td class="calendar-table__cell">2</td>
-										<td class="calendar-table__cell calendar-table__cell_marked">3</td>
-										<td class="calendar-table__cell">4</td>
-									</tr>
-									<tr class="calendar-table__row">
-										<td class="calendar-table__cell">5</td>
-										<td class="calendar-table__cell calendar-table__cell_marked">6</td>
-										<td class="calendar-table__cell">7</td>
-										<td class="calendar-table__cell">8</td>
-										<td class="calendar-table__cell">9</td>
-										<td class="calendar-table__cell">10</td>
-										<td class="calendar-table__cell">11</td>
-									</tr>
-									<tr class="calendar-table__row">
-										<td class="calendar-table__cell">12</td>
-										<td class="calendar-table__cell">13</td>
-										<td class="calendar-table__cell">14</td>
-										<td class="calendar-table__cell">15</td>
-										<td class="calendar-table__cell">16</td>
-										<td class="calendar-table__cell">17</td>
-										<td class="calendar-table__cell">18</td>
-									</tr>
-									<tr class="calendar-table__row">
-										<td class="calendar-table__cell">19</td>
-										<td class="calendar-table__cell">20</td>
-										<td class="calendar-table__cell">21</td>
-										<td class="calendar-table__cell calendar-table__cell_active">22</td>
-										<td class="calendar-table__cell">23</td>
-										<td class="calendar-table__cell">24</td>
-										<td class="calendar-table__cell">25</td>
-									</tr>
-									<tr class="calendar-table__row">
-										<td class="calendar-table__cell">26</td>
-										<td class="calendar-table__cell">27</td>
-										<td class="calendar-table__cell">28</td>
-										<td class="calendar-table__cell">29</td>
-										<td class="calendar-table__cell">30</td>
-										<td class="calendar-table__cell">31</td>
-										<td class="calendar-table__cell calendar-table__cell_other-moth">1</td>
-									</tr>
-								</table>								
-							</div>
-							<div class="calendar-notification">
-								<span class="calendar-notification__title">
-									*Client meeting*
-								</span>
-								<span class="calendar-notification__time">
-									5.00 PM
-								</span>
-							</div>
-						</div>
-						<div class="separate"></div>
-						<div class="forms">
-							<header class="forms__header">
-								Chat &amp; e-mail
-							</header>
-							<h4 class="forms__info">
-								You can send some message in chat below!
-							</h4>
-							<div class="chat">
-								<div class="chat-title">
-									<span class="chat-title__icon"></span>
-									<span class="chat-title__caption">Chat</span>
-									<span class="chat-title__popup"></span>
-									<span class="chat-title__close"></span>
-								</div>
-								<div class="separate"></div>
-								<div class="chat-people">
-									<ul class="chat-list">
-										<li class="chat-list-item">
-											<span class="chat-list-item__img other"></span>
-											<h5 class="chat-list-item__name">
-												Matthew Perry
-											</h5>
-											<span class="chat-list-item__info">
-												Aperiam ea odio et ipsum nemo libero sed eaque deleniti
-											</span>
-											<span class="chat-list-item__time">6 min</span>
-										</li>
-										<li class="chat-list-item">
-											<span class="chat-list-item__img"></span>
-											<h5 class="chat-list-item__name">
-												Alex Goran
-											</h5>
-											<span class="chat-list-item__info">
-												Laboriosam quis iure iusto tempore quilbusdam
-											</span>
-											<span class="chat-list-item__time">13 min</span>
-										</li>
-										<li class="chat-list-item">
-											<span class="chat-list-item__img other"></span>
-											<h5 class="chat-list-item__name">
-												Matthew Perry
-											</h5>
-											<span class="chat-list-item__info">
-												Deserunt recusandae qui et quo quis harum unde
-											</span>
-											<span class="chat-list-item__time">20 min</span>
-										</li>
-										<li class="chat-list-item">
-											<span class="chat-list-item__img"></span>
-											<h5 class="chat-list-item__name">
-												Alex Goran
-											</h5>
-											<span class="chat-list-item__info">
-												Quo explicabo exercitationem doloribus
-											</span>
-											<span class="chat-list-item__time">45 min</span>
-										</li>
-										<li class="chat-list-item">
-											<span class="chat-list-item__img other"></span>
-											<h5 class="chat-list-item__name">
-												Matthew Perry
-											</h5>
-											<span class="chat-list-item__info">
-												Adipisci libero et maiores dolorem
-											</span>
-											<span class="chat-list-item__time">1 h</span>
-										</li>
-									</ul>
-								</div>
-								<div class="chat-message">
-									<input type="text" class="chat-message__input" placeholder="Type your message here...">
-									<button class="chat-message__send">Send</button>
-								</div>					
-							</div>
-							<div class="email">
-								<div class="email-title">
-									<span class="email-title__icon"></span>
-									<span class="email-title__caption">e-mail</span>
-									<span class="email-title__popup"></span>
-									<span class="email-title__close"></span>
-								</div>
-								<div class="email-form">
-									<input type="text"  class="email-form__to" placeholder="To">
-									<input type="text"  class="email-form__subject" placeholder="Subject">
-									<textarea class="email-form__text" placeholder="Type Your message here ...." ></textarea>
-								</div>
-								<div class="email-message">
-									<span class="email-message__edit"></span>
-									<span class="email-message__clip"></span>
-									<button class="email-message__send">Send</button>
-								</div>	
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<footer class="footer">Copy right 2014 All Rights Reserved.</footer>
-		</div>
-	</div>
+    <div class="wrapper">
+        <section class="services">
+            <header class="services-head">
+                 <div class="services-head__line"></div>
+                 <div class="services-head-caption">                    
+                     <span class="services-head__title">What we do</span>
+                 </div> 
+            </header>
+            <section class="services-description">
+                <div class="services-item">
+                    <div class="services-item-img preparation">
+                        <span  class="services-item-img__preparation"></span>
+                    </div>
+                    <div class="services-info">
+                        <h3 class="services-info__title">
+                            Lorem ipsum dolor sit
+                        </h3>
+                        <span class="services-info__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
+                        </span>
+                    </div>
+                </div>   
+                <div class="services-item">
+                    <div class="services-item-img concept">
+                        <span  class="services-item-img__concept"></span>
+                    </div>
+                    <div class="services-info">
+                        <h3 class="services-info__title">
+                            Lorem ipsum dolor sit
+                        </h3>
+                        <span class="services-info__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
+                        </span>
+                    </div>
+                </div>   
+                <div class="services-item">
+                    <div class="services-item-img devdesign">
+                        <span  class="services-item-img__devdesign"></span>
+                    </div>
+                    <div class="services-info">
+                        <h3 class="services-info__title">
+                            Lorem ipsum dolor sit
+                        </h3>
+                        <span class="services-info__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
+                        </span>
+                    </div>
+                </div>   
+                <div class="services-item">
+                    <div class="services-item-img techdesign">
+                        <span  class="services-item-img__techdesign"></span>
+                    </div>
+                    <div class="services-info">
+                        <h3 class="services-info__title">
+                            Lorem ipsum dolor sit
+                        </h3>
+                        <span class="services-info__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
+                        </span>
+                    </div>
+                </div>   
+                <div class="services-item">
+                    <div class="services-item-img construction">
+                        <span  class="services-item-img__construction"></span>
+                    </div>
+                    <div class="services-info">
+                        <h3 class="services-info__title">
+                            Lorem ipsum dolor sit
+                        </h3>
+                        <span class="services-info__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
+                        </span>
+                    </div>
+                </div>   
+                <div class="services-item">
+                    <div class="services-item-img closeout">
+                        <span  class="services-item-img__closeout"></span>
+                    </div>
+                    <div class="services-info">
+                        <h3 class="services-info__title">
+                            Lorem ipsum dolor sit
+                        </h3>
+                        <span class="services-info__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
+                        </span>
+                    </div>
+                </div>   
+            </section>
+        </section>
+    </div>
 </body>
 </html>
