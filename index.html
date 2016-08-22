@@ -1,106 +1,60 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="en">
+  <head>
+    <title>Oberon</title>
+
     <meta charset="UTF-8">
-    <title>What we do</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <style>
-        .wrapper {
-            margin: auto;
-            height: 100vh;
-        }
-    </style>
-</head>
-<body>
-    <div class="wrapper">
-        <section class="services">
-            <header class="services-head">
-                 <div class="services-head__line"></div>
-                 <div class="services-head-caption">                    
-                     <span class="services-head__title">What we do</span>
-                 </div> 
-            </header>
-            <section class="services-description">
-                <div class="services-item">
-                    <div class="services-item-img preparation">
-                        <span  class="services-item-img__preparation"></span>
-                    </div>
-                    <div class="services-info">
-                        <h3 class="services-info__title">
-                            Lorem ipsum dolor sit
-                        </h3>
-                        <span class="services-info__text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
-                        </span>
-                    </div>
-                </div>   
-                <div class="services-item">
-                    <div class="services-item-img concept">
-                        <span  class="services-item-img__concept"></span>
-                    </div>
-                    <div class="services-info">
-                        <h3 class="services-info__title">
-                            Lorem ipsum dolor sit
-                        </h3>
-                        <span class="services-info__text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
-                        </span>
-                    </div>
-                </div>   
-                <div class="services-item">
-                    <div class="services-item-img devdesign">
-                        <span  class="services-item-img__devdesign"></span>
-                    </div>
-                    <div class="services-info">
-                        <h3 class="services-info__title">
-                            Lorem ipsum dolor sit
-                        </h3>
-                        <span class="services-info__text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
-                        </span>
-                    </div>
-                </div>   
-                <div class="services-item">
-                    <div class="services-item-img techdesign">
-                        <span  class="services-item-img__techdesign"></span>
-                    </div>
-                    <div class="services-info">
-                        <h3 class="services-info__title">
-                            Lorem ipsum dolor sit
-                        </h3>
-                        <span class="services-info__text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
-                        </span>
-                    </div>
-                </div>   
-                <div class="services-item">
-                    <div class="services-item-img construction">
-                        <span  class="services-item-img__construction"></span>
-                    </div>
-                    <div class="services-info">
-                        <h3 class="services-info__title">
-                            Lorem ipsum dolor sit
-                        </h3>
-                        <span class="services-info__text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
-                        </span>
-                    </div>
-                </div>   
-                <div class="services-item">
-                    <div class="services-item-img closeout">
-                        <span  class="services-item-img__closeout"></span>
-                    </div>
-                    <div class="services-info">
-                        <h3 class="services-info__title">
-                            Lorem ipsum dolor sit
-                        </h3>
-                        <span class="services-info__text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ad animi dignissimos
-                        </span>
-                    </div>
-                </div>   
-            </section>
-        </section>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    
+    <link rel="stylesheet" href="css/styles.css"> 
+    <script src="js/main.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header id="header" class="header expanded">
+        <nav class="nav">
+          <a href="#" id="collapse-menu" class="nav-close-icon"></a>
+          <a href="#" id="expand-menu" class="nav-menu-icon"></a>
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="#" class="nav-item-link">Главная</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-item-link">Продукты</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-item-link">О компании</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-item-link">Служба поддержки</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-item-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <img src="css/images/logo.png" alt="">
+        </div>
+        <div class="demo">
+          <a href="#" class="demo-link">Скачать Демо</a>
+        </div>
+        <div class="nav-select">
+          <div class="select">
+            <input type="checkbox" id="toggle" class="toggle">
+            <label for="toggle">русский <i class="arrow-down"></i></label>
+            <ul>
+              <li class="select-option"><input type="radio" name="choice" id="c1" value="c1"><label for="c1">english</label></li>
+            </ul> 
+          </div>
+        </div>
+      </header>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure facilis omnis sit, assumenda consequuntur rem voluptatum. Fugit corrupti magnam distinctio incidunt recusandae quis possimus ab veritatis maxime quasi, ut dicta assumenda sunt, ratione beatae, perferendis. Quas ut, est atque beatae nobis ratione pariatur, corporis molestiae ipsa velit dolorum? Doloribus voluptas aliquid perferendis nesciunt rerum totam sed accusantium alias reiciendis delectus, consectetur ab deserunt accusamus minima mollitia ullam, cum excepturi asperiores vitae illo! Nesciunt odit ullam commodi dolores aliquid voluptates odio illo recusandae earum consequuntur quaerat natus, atque excepturi ipsa omnis autem quibusdam consequatur facere vero! Officia facilis ad eum quaerat recusandae asperiores totam doloribus ex maiores blanditiis, iure alias accusamus unde pariatur odit esse mollitia debitis maxime eligendi voluptates! Ducimus dolores earum odio nostrum sint dolore, cupiditate enim eveniet? Eum harum odio eligendi pariatur est sint illo quod ipsam tempora, suscipit laudantium quo error aliquam mollitia voluptatum sit sequi iste temporibus eveniet, quas ipsum. Porro at, debitis iste qui ad quia illo ipsa quo consequatur, exercitationem sed, architecto veniam est assumenda eligendi numquam minus tempore vitae aliquid esse. Vel quis soluta nesciunt porro ad! Ratione voluptatem, officia illum sequi fugit praesentium laboriosam molestias dolores ea incidunt blanditiis, quo? Odit, atque.
+      <h1>Footer</h1>
     </div>
-</body>
+  </body>
 </html>
