@@ -76,18 +76,22 @@ body {
   margin: auto;
   padding: 30px; }
 
+.wrapper {
+  max-width: 100%;
+  padding: 20px; }
+
 a {
-  color: #557276;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #557276; }
 
 a:hover, a:focus {
   text-decoration: none;
   color: #076290; }
 
 ul {
-  list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
 
 .btn-normal, .header.expanded .demo-link, .header.collapsed .demo-link {
   font-size: 12px;
@@ -271,5 +275,61 @@ ul {
 
 .header.collapsed .nav-select {
   display: none; }
+
+.slider {
+  position: static;
+  display: table;
+  width: 100%;
+  height: 598px;
+  margin-bottom: 20px; }
+
+.slider-caption {
+  font-weight: bold;
+  line-height: 38px;
+  text-transform: uppercase; }
+
+.slider-background {
+  width: 100%;
+  height: 598px;
+  background: url("images/terminal.jpg");
+  background-size: cover;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: auto;
+  left: 0; }
+
+.slider-content {
+  position: relative;
+  display: table-cell;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff; }
+
+.slider-title, .slider-date, .slider-article {
+  max-width: 850px;
+  margin: auto; }
+
+.slider-article {
+  font: normal normal 16px/28px "AvantGardeGothic", sans-serif;
+  max-width: 740px; }
+
+.slider-date p {
+  position: relative;
+  margin: 20px;
+  padding: 5px; }
+
+.slider-date p:before {
+  display: block;
+  width: 80px;
+  content: '';
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  position: absolute;
+  top: 0;
+  right: 45%;
+  bottom: 0;
+  left: auto; }
 
 /*# sourceMappingURL=maps/styles.css.map */
