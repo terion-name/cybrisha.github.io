@@ -612,10 +612,11 @@ img {
   display: none; }
 
 .appliance {
-  margin-top: 50px; }
+  margin-top: 75px; }
 
 .appliance .appliance-caption {
   line-height: 32px;
+  margin-top: 50px;
   text-align: center;
   text-transform: uppercase; }
 
@@ -658,12 +659,13 @@ img {
   height: 197px; }
 
 .clients {
-  margin-top: 50px auto; }
+  margin-top: 50px; }
 
 .clients .clients-caption {
   line-height: 32px;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 50px; }
 
 .clients .clients-list {
   margin: 50px auto 20px; }
@@ -699,6 +701,104 @@ img {
 .clients .buttons.prev {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
+
+.products-caption {
+  line-height: 32px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.products-bg {
+  width: 100%;
+  min-height: 805px;
+  background: url("images/products-bg.png");
+  background-position: 50% 50%;
+  background-size: cover; }
+
+.products-list {
+  display: table-cell;
+  height: 805px;
+  vertical-align: middle; }
+
+.products-card {
+  width: 100;
+  min-height: 400px;
+  padding: 0;
+  vertical-align: middle;
+  opacity: .9;
+  color: #fff; }
+
+.products-card .products-content {
+  font-weight: bold;
+  padding: 35px 0 15px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.products-card .product-img {
+  width: 100%;
+  height: 180px; }
+
+.products-card .products-title, .products-card .products-info {
+  font-weight: normal;
+  padding: 5px 20px;
+  text-align: center;
+  text-transform: none; }
+
+.products-card .btn.btn-normal, .products-card .btn-normal, .products-card .header.expanded .demo-link, .header.expanded .products-card .demo-link, .products-card .btn-normal.btn-light, .products-card .header.collapsed .btn-normal.demo-link, .header.collapsed .products-card .btn-normal.demo-link, .products-card .btn-normal.btn-demo {
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+  opacity: 0; }
+
+.products-card-first, .products-card-second, .products-card-third {
+  -webkit-transition: all .8s;
+  transition: all .8s; }
+
+.products-card-first:hover, .products-card-second:hover, .products-card-third:hover {
+  cursor: pointer;
+  background: #fff; }
+
+.products-card-first:hover .products-title, .products-card-second:hover .products-title, .products-card-third:hover .products-title {
+  color: #076290; }
+
+.products-card-first:hover .products-info, .products-card-second:hover .products-info, .products-card-third:hover .products-info {
+  color: #5b777b; }
+
+.products-card-first:hover .btn.btn-normal, .products-card-first:hover .btn-normal, .products-card-first:hover .header.expanded .demo-link, .header.expanded .products-card-first:hover .demo-link, .products-card-first:hover .btn-normal.btn-light, .products-card-first:hover .header.collapsed .btn-normal.demo-link, .header.collapsed .products-card-first:hover .btn-normal.demo-link, .products-card-first:hover .btn-normal.btn-demo, .products-card-second:hover .btn.btn-normal, .products-card-second:hover .btn-normal, .products-card-second:hover .header.expanded .demo-link, .header.expanded .products-card-second:hover .demo-link, .products-card-second:hover .btn-normal.btn-light, .products-card-second:hover .header.collapsed .btn-normal.demo-link, .header.collapsed .products-card-second:hover .btn-normal.demo-link, .products-card-second:hover .btn-normal.btn-demo, .products-card-third:hover .btn.btn-normal, .products-card-third:hover .btn-normal, .products-card-third:hover .header.expanded .demo-link, .header.expanded .products-card-third:hover .demo-link, .products-card-third:hover .btn-normal.btn-light, .products-card-third:hover .header.collapsed .btn-normal.demo-link, .header.collapsed .products-card-third:hover .btn-normal.demo-link, .products-card-third:hover .btn-normal.btn-demo {
+  opacity: 1; }
+
+.products-card-first {
+  background: #5b777b; }
+
+.products-card-first .product-img {
+  background: url("images/enterprise-suite.png") no-repeat;
+  background-position: 50% 50%; }
+
+.products-card-first:hover .product-img {
+  background: url("images/enterprise-suite-hover.png") no-repeat;
+  background-position: 54% 50%; }
+
+.products-card-second {
+  background: #076290; }
+
+.products-card-second .product-img {
+  background: url("images/oberon-product.png") no-repeat;
+  background-position: 50% 50%; }
+
+.products-card-second:hover .product-img {
+  background: url("images/oberon-product-hover.png") no-repeat;
+  background-position: 56% 50%; }
+
+.products-card-third {
+  background: #0c7cbd; }
+
+.products-card-third .product-img {
+  background: url("images/tp-secure.png") no-repeat;
+  background-position: 50% 50%; }
+
+.products-card-third:hover .product-img {
+  background: url("images/tp-secure-hover.png") no-repeat;
+  background-position: 56% 50%; }
 
 .slider-background {
   width: 100%;
@@ -753,7 +853,6 @@ img {
 
 .download-demo-bg {
   height: 220px;
-  margin-top: 20px;
   background: #cad1d3; }
 
 .download-demo {
